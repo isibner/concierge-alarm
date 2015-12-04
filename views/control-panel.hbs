@@ -1,0 +1,31 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-8 col-md-offset-2">
+    {{#if error}}
+    <p class="bg-danger push-top">Error: {{error}}</p>
+    {{/if}}
+    <h1>Welcome to Concierge.</h1>
+      <form method="POST">
+        <div class="form-group">
+          <label for="start-time">What time do you want to wake up?</label><br>
+          <input id="start-time" type="time" name="start-time"/>
+        </div>
+        <div class="form-group">
+          <label for="end-time">When do you want the alarm to stop ringing if you go back to bed?</label><br>
+          <input id="end-time" type="time" name="end-time"/>
+        </div>
+        <button type="submit" class="btn btn-default">Set Alarm</button>
+      </form>
+    </div>
+  </div>
+</div>
+
+<script src="moment.js"></script>
+<script>
+  window.FORMAT_STR = 'HH:mm';
+  window.times = {
+    'start-time': moment('{{{startTime}}}', FORMAT_STR),
+    'end-time': moment('{{{endTime}}}', FORMAT_STR)
+  };
+</script>
+<script src="control-panel.js"></script>

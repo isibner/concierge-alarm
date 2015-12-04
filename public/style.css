@@ -1,0 +1,20 @@
+body {
+  font-size: 20px;
+}
+
+input, select {
+  font-size: 25px;
+}
+
+button.btn {
+  font-size: 22px;
+}
+
+label {
+  cursor: pointer;
+}
+
+.push-top {
+  margin-top: 20px;
+  padding: 10px;
+}
